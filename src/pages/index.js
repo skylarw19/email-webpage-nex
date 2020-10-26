@@ -16,51 +16,51 @@ const Index = () => {
   return(
     <Container>
       <Text>Hello</Text>
-      <Box border="1px" pt="2%" pb="5%" pl="15%" pr="15%" textAlign="center">
+      <Box border="1px" w="75%" pt="2%" pb="5%" pl="10%" pr="10%" textAlign="center">
         <Text fontSize="lg">Edit Communication Preferences</Text>
         <Text fontSize="sm">Tell us how you would like us to engage with you.</Text>
         <br></br>
         <Text textAlign="left">Email Notifications:</Text>
         <br></br>
-        <Box>
-          <Flex border="1px" p="2%" justifyContent="space-between" align="center">
-            <FormLabel>Frequency of Billing Summaries</FormLabel>
+        <Box border="1px">
+          <Flex border="1px" p="1%" justifyContent="space-between" align="center">
+            <FormLabel fontSize="sm">Frequency of Billing Summaries</FormLabel>
             <Switch id="frequency-of-billing" defaultIsChecked={true}></Switch>
           </Flex>
-          <Flex border="1px" p="2%" justifyContent="space-between" align="center">
-            <FormLabel>Content Recommendations</FormLabel>
+          <Flex border="1px" p="1%" justifyContent="space-between" align="center">
+            <FormLabel fontSize="sm">Content Recommendations</FormLabel>
             <Switch id="frequency-of-billing" defaultIsChecked={true}></Switch>
           </Flex>
-          <Flex border="1px" p="2%" justifyContent="space-between" align="center">
-            <FormLabel>Updates on your Favorite Shows</FormLabel>
+          <Flex border="1px" p="1%" justifyContent="space-between" align="center">
+            <FormLabel fontSize="sm">Updates on your Favorite Shows</FormLabel>
             <Switch id="frequency-of-billing" defaultIsChecked={true}></Switch>
           </Flex>
-          <Flex border="1px" p="2%" justifyContent="space-between" align="center">
-            <FormLabel>Advice on how to save on your service subscriptions</FormLabel>
+          <Flex border="1px" p="1%" justifyContent="space-between" align="center">
+            <FormLabel fontSize="sm">Advice on how to save on your service subscriptions</FormLabel>
             <Switch id="frequency-of-billing" defaultIsChecked={true}></Switch>
           </Flex>
-          <Flex border="1px" p="2%" justifyContent="space-between" align="center">
-            <FormLabel>Bill Reminders</FormLabel>
+          <Flex border="1px" p="1%" justifyContent="space-between" align="center">
+            <FormLabel fontSize="sm">Bill Reminders</FormLabel>
             <Switch id="frequency-of-billing" defaultIsChecked={true}></Switch>
           </Flex>
-          <Flex border="1px" p="2%" justifyContent="space-between" align="center">
-            <FormLabel>Insights</FormLabel>
+          <Flex border="1px" p="1%" justifyContent="space-between" align="center">
+            <FormLabel fontSize="sm">Insights</FormLabel>
             <Switch id="frequency-of-billing" defaultIsChecked={true}></Switch>
           </Flex>
-          <Flex border="1px" p="2%" justifyContent="space-between" align="center">
-            <FormLabel>Product Updates</FormLabel>
+          <Flex border="1px" p="1%" justifyContent="space-between" align="center">
+            <FormLabel fontSize="sm">Product Updates</FormLabel>
             <Switch id="frequency-of-billing" defaultIsChecked={true}></Switch>
           </Flex>
-          <Flex border="1px" p="2%" justifyContent="space-between" align="center">
-            <FormLabel>Contests & Sweepstakes</FormLabel>
+          <Flex border="1px" p="1%" justifyContent="space-between" align="center">
+            <FormLabel fontSize="sm">Contests & Sweepstakes</FormLabel>
             <Switch id="frequency-of-billing" defaultIsChecked={true}></Switch>
           </Flex>
-          <Flex border="1px" p="2%" justifyContent="space-between" align="center">
-            <FormLabel>Special Offers</FormLabel>
+          <Flex border="1px" p="1%" justifyContent="space-between" align="center">
+            <FormLabel fontSize="sm">Special Offers</FormLabel>
             <Switch id="frequency-of-billing" defaultIsChecked={true}></Switch>
           </Flex>
-          <Flex border="1px" p="2%" justifyContent="space-between" align="center">
-            <FormLabel>Promotional Emails</FormLabel>
+          <Flex border="1px" p="1%" justifyContent="space-between" align="center">
+            <FormLabel fontSize="sm">Promotional Emails</FormLabel>
             <Switch id="frequency-of-billing" defaultIsChecked={true}></Switch>
           </Flex>
 
