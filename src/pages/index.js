@@ -1,7 +1,8 @@
 import {
   Text,
   Switch,
-  Box
+  Box,
+  Flex
 } from '@chakra-ui/core'
 
 import { Container } from '../components/Container'
@@ -16,9 +17,11 @@ const Index = () => {
         <br></br>
         <Text>Email Notifications:</Text>
         <br></br>
-        <Box border="1px" p="2%">Frequency of billing summaries
-          <Switch justifyItems="right"></Switch>
-        </Box>
+        <Flex border="1px" p="2%" justifyContent="space-between">
+          <Text>Frequency of billing summaries</Text>
+          <Switch></Switch>
+        </Flex>
+        
         <Box border="1px" p="2%">Content Recommendations</Box>
         <Box border="1px" p="2%">Updates on your Favorite Shows</Box>
         <Box border="1px" p="2%">Advice on how to save on your service subscriptions</Box>
