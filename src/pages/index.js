@@ -6,18 +6,29 @@ import {
   Flex,
   Link,
   Button,
+  Select,
 } from '@chakra-ui/core'
 
 import { Container } from '../components/Container'
-
-// could probably create an array of titles and map out components for each one
-// instead of repeating so many Flex tags
 
 // update ID for each Switch
 // change width of whole thing once on real 'MyAccount' webpage
 // purple nexus color not showing for Switch or Button colors? #5B62CC - need to make custom theme?
 
+const notifications = [
+  'Content Recommendations',
+  'Updates on your Favorite Shows',
+  'Advice on How to Save on your Service Subscriptions',
+  'Bill Reminders',
+  'Insights',
+  'Product Updates',
+  'Contests & Sweepstakes',
+  'Special Offers',
+  'Promotional Emails'
+]
+
 const Index = () => {
+
   return(
     <Container>
       <Text>Hello</Text>
@@ -30,44 +41,19 @@ const Index = () => {
         <Box border="1px">
           <Flex border="1px" p="1%" justifyContent="space-between" align="center">
             <FormLabel fontSize="sm">Frequency of Billing Summaries</FormLabel>
-            <Switch id="frequency-of-billing" defaultIsChecked={true}></Switch>
+            <Select size="sm" w="wrap" variant="unstyled" placeholder="bi-monthly">
+              <option value="monthly">monthly</option>
+              <option value="quarterly">quarterly</option>
+              <option value="annually">annually</option>
+            </Select>
           </Flex>
-          <Flex border="1px" p="1%" justifyContent="space-between" align="center">
-            <FormLabel fontSize="sm">Content Recommendations</FormLabel>
-            <Switch id="" defaultIsChecked={true}></Switch>
-          </Flex>
-          <Flex border="1px" p="1%" justifyContent="space-between" align="center">
-            <FormLabel fontSize="sm">Updates on your Favorite Shows</FormLabel>
-            <Switch id="" defaultIsChecked={true}></Switch>
-          </Flex>
-          <Flex border="1px" p="1%" justifyContent="space-between" align="center">
-            <FormLabel fontSize="sm">Advice on how to save on your service subscriptions</FormLabel>
-            <Switch id="" defaultIsChecked={true}></Switch>
-          </Flex>
-          <Flex border="1px" p="1%" justifyContent="space-between" align="center">
-            <FormLabel fontSize="sm">Bill Reminders</FormLabel>
-            <Switch id="" defaultIsChecked={true}></Switch>
-          </Flex>
-          <Flex border="1px" p="1%" justifyContent="space-between" align="center">
-            <FormLabel fontSize="sm">Insights</FormLabel>
-            <Switch id="" defaultIsChecked={true}></Switch>
-          </Flex>
-          <Flex border="1px" p="1%" justifyContent="space-between" align="center">
-            <FormLabel fontSize="sm">Product Updates</FormLabel>
-            <Switch id="" defaultIsChecked={true}></Switch>
-          </Flex>
-          <Flex border="1px" p="1%" justifyContent="space-between" align="center">
-            <FormLabel fontSize="sm">Contests & Sweepstakes</FormLabel>
-            <Switch id="" defaultIsChecked={true}></Switch>
-          </Flex>
-          <Flex border="1px" p="1%" justifyContent="space-between" align="center">
-            <FormLabel fontSize="sm">Special Offers</FormLabel>
-            <Switch id="" defaultIsChecked={true}></Switch>
-          </Flex>
-          <Flex border="1px" p="1%" justifyContent="space-between" align="center">
-            <FormLabel fontSize="sm">Promotional Emails</FormLabel>
-            <Switch id="" defaultIsChecked={true}></Switch>
-          </Flex>
+
+          {notifications.map(notification => (
+            <Flex border="1px" p="1%" justifyContent="space-between" align="center">
+              <FormLabel fontSize="sm">{notification}</FormLabel>
+              <Switch id={notification} defaultIsChecked={true}></Switch>
+            </Flex>
+          ))}
         </Box>
         <br></br>
         <Link fontSize="lg"><a>Unsubscribe from all emails</a></Link>
