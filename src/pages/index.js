@@ -27,27 +27,51 @@ const Index = () => {
             <FormLabel>Frequency of Billing Summaries</FormLabel>
             <Switch id="frequency-of-billing" defaultIsChecked={true}></Switch>
           </Flex>
+          <Flex border="1px" p="2%" justifyContent="space-between" align="center">
+            <FormLabel>Content Recommendations</FormLabel>
+            <Switch id="frequency-of-billing" defaultIsChecked={true}></Switch>
+          </Flex>
+          <Flex border="1px" p="2%" justifyContent="space-between" align="center">
+            <FormLabel>Updates on your Favorite Shows</FormLabel>
+            <Switch id="frequency-of-billing" defaultIsChecked={true}></Switch>
+          </Flex>
+          <Flex border="1px" p="2%" justifyContent="space-between" align="center">
+            <FormLabel>Advice on how to save on your service subscriptions</FormLabel>
+            <Switch id="frequency-of-billing" defaultIsChecked={true}></Switch>
+          </Flex>
+          <Flex border="1px" p="2%" justifyContent="space-between" align="center">
+            <FormLabel>Bill Reminders</FormLabel>
+            <Switch id="frequency-of-billing" defaultIsChecked={true}></Switch>
+          </Flex>
+          <Flex border="1px" p="2%" justifyContent="space-between" align="center">
+            <FormLabel>Insights</FormLabel>
+            <Switch id="frequency-of-billing" defaultIsChecked={true}></Switch>
+          </Flex>
+          <Flex border="1px" p="2%" justifyContent="space-between" align="center">
+            <FormLabel>Product Updates</FormLabel>
+            <Switch id="frequency-of-billing" defaultIsChecked={true}></Switch>
+          </Flex>
+          <Flex border="1px" p="2%" justifyContent="space-between" align="center">
+            <FormLabel>Contests & Sweepstakes</FormLabel>
+            <Switch id="frequency-of-billing" defaultIsChecked={true}></Switch>
+          </Flex>
+          <Flex border="1px" p="2%" justifyContent="space-between" align="center">
+            <FormLabel>Special Offers</FormLabel>
+            <Switch id="frequency-of-billing" defaultIsChecked={true}></Switch>
+          </Flex>
+          <Flex border="1px" p="2%" justifyContent="space-between" align="center">
+            <FormLabel>Promotional Emails</FormLabel>
+            <Switch id="frequency-of-billing" defaultIsChecked={true}></Switch>
+          </Flex>
 
         </Box>
-        
-        <Box border="1px" p="2%">Content Recommendations</Box>
-        <Box border="1px" p="2%">Updates on your Favorite Shows</Box>
-        <Box border="1px" p="2%">Advice on how to save on your service subscriptions</Box>
-        <Box border="1px" p="2%">Bill reminders</Box>
-        <Box border="1px" p="2%">Insights</Box>
-        <Box border="1px" p="2%">Product Updates</Box>
-        <Box border="1px" p="2%">Contests & Sweepstakes</Box>
-        <Box border="1px" p="2%">Special Offers</Box>
-        <Box border="1px" p="2%">Promostional Emails</Box>
         <br></br>
-
-        <Link><a>Unsubscribe from all emails</a></Link>
+        <Link fontSize="lg"><a>Unsubscribe from all emails</a></Link>
         <Text fontSize="sm">Please note: You will still receive email confirmation for any purchases made and from billing receipts.</Text>
         <br></br>
         <Button border="1px" m="1%">Save</Button>
         <br></br>
         <Button border="1px" m="1%">Cancel</Button>
-        
       </Box>
     </Container>
   )
