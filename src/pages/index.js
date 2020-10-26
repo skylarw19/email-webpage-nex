@@ -5,13 +5,18 @@ import {
   Box,
   Flex,
   Link,
-  Button
+  Button,
 } from '@chakra-ui/core'
 
 import { Container } from '../components/Container'
 
 // could probably create an array of titles and map out components for each one
 // instead of repeating so many Flex tags
+
+// update ID for each Switch
+// change width of whole thing once on real 'MyAccount' webpage
+// purple nexus color not showing for Switch or Button colors? #5B62CC - need to make custom theme?
+
 const Index = () => {
   return(
     <Container>
@@ -29,41 +34,40 @@ const Index = () => {
           </Flex>
           <Flex border="1px" p="1%" justifyContent="space-between" align="center">
             <FormLabel fontSize="sm">Content Recommendations</FormLabel>
-            <Switch id="frequency-of-billing" defaultIsChecked={true}></Switch>
+            <Switch id="" defaultIsChecked={true}></Switch>
           </Flex>
           <Flex border="1px" p="1%" justifyContent="space-between" align="center">
             <FormLabel fontSize="sm">Updates on your Favorite Shows</FormLabel>
-            <Switch id="frequency-of-billing" defaultIsChecked={true}></Switch>
+            <Switch id="" defaultIsChecked={true}></Switch>
           </Flex>
           <Flex border="1px" p="1%" justifyContent="space-between" align="center">
             <FormLabel fontSize="sm">Advice on how to save on your service subscriptions</FormLabel>
-            <Switch id="frequency-of-billing" defaultIsChecked={true}></Switch>
+            <Switch id="" defaultIsChecked={true}></Switch>
           </Flex>
           <Flex border="1px" p="1%" justifyContent="space-between" align="center">
             <FormLabel fontSize="sm">Bill Reminders</FormLabel>
-            <Switch id="frequency-of-billing" defaultIsChecked={true}></Switch>
+            <Switch id="" defaultIsChecked={true}></Switch>
           </Flex>
           <Flex border="1px" p="1%" justifyContent="space-between" align="center">
             <FormLabel fontSize="sm">Insights</FormLabel>
-            <Switch id="frequency-of-billing" defaultIsChecked={true}></Switch>
+            <Switch id="" defaultIsChecked={true}></Switch>
           </Flex>
           <Flex border="1px" p="1%" justifyContent="space-between" align="center">
             <FormLabel fontSize="sm">Product Updates</FormLabel>
-            <Switch id="frequency-of-billing" defaultIsChecked={true}></Switch>
+            <Switch id="" defaultIsChecked={true}></Switch>
           </Flex>
           <Flex border="1px" p="1%" justifyContent="space-between" align="center">
             <FormLabel fontSize="sm">Contests & Sweepstakes</FormLabel>
-            <Switch id="frequency-of-billing" defaultIsChecked={true}></Switch>
+            <Switch id="" defaultIsChecked={true}></Switch>
           </Flex>
           <Flex border="1px" p="1%" justifyContent="space-between" align="center">
             <FormLabel fontSize="sm">Special Offers</FormLabel>
-            <Switch id="frequency-of-billing" defaultIsChecked={true}></Switch>
+            <Switch id="" defaultIsChecked={true}></Switch>
           </Flex>
           <Flex border="1px" p="1%" justifyContent="space-between" align="center">
             <FormLabel fontSize="sm">Promotional Emails</FormLabel>
-            <Switch id="frequency-of-billing" defaultIsChecked={true}></Switch>
+            <Switch id="" defaultIsChecked={true}></Switch>
           </Flex>
-
         </Box>
         <br></br>
         <Link fontSize="lg"><a>Unsubscribe from all emails</a></Link>
