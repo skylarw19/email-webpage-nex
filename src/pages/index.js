@@ -1,26 +1,34 @@
 import {
   Text,
+  FormLabel,
   Switch,
   Box,
-  Flex
+  Flex,
+  Link,
+  Button
 } from '@chakra-ui/core'
 
 import { Container } from '../components/Container'
 
+// could probably create an array of titles and map out components for each one
+// instead of repeating so many Flex tags
 const Index = () => {
   return(
     <Container>
       <Text>Hello</Text>
-      <Box border="1px" pt="2%" pl="15%" pr="15%">
-        <Text textAlign="center" fontSize="lg">Edit Communication Preferences</Text>
-        <Text textAlign="center" fontSize="sm">Tell us how you would like us to engage with you.</Text>
+      <Box border="1px" pt="2%" pb="5%" pl="15%" pr="15%" textAlign="center">
+        <Text fontSize="lg">Edit Communication Preferences</Text>
+        <Text fontSize="sm">Tell us how you would like us to engage with you.</Text>
         <br></br>
-        <Text>Email Notifications:</Text>
+        <Text textAlign="left">Email Notifications:</Text>
         <br></br>
-        <Flex border="1px" p="2%" justifyContent="space-between">
-          <Text>Frequency of billing summaries</Text>
-          <Switch></Switch>
-        </Flex>
+        <Box>
+          <Flex border="1px" p="2%" justifyContent="space-between" align="center">
+            <FormLabel>Frequency of Billing Summaries</FormLabel>
+            <Switch id="frequency-of-billing" defaultIsChecked={true}></Switch>
+          </Flex>
+
+        </Box>
         
         <Box border="1px" p="2%">Content Recommendations</Box>
         <Box border="1px" p="2%">Updates on your Favorite Shows</Box>
@@ -32,6 +40,14 @@ const Index = () => {
         <Box border="1px" p="2%">Special Offers</Box>
         <Box border="1px" p="2%">Promostional Emails</Box>
         <br></br>
+
+        <Link><a>Unsubscribe from all emails</a></Link>
+        <Text fontSize="sm">Please note: You will still receive email confirmation for any purchases made and from billing receipts.</Text>
+        <br></br>
+        <Button border="1px" m="1%">Save</Button>
+        <br></br>
+        <Button border="1px" m="1%">Cancel</Button>
+        
       </Box>
     </Container>
   )
