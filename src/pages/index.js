@@ -55,7 +55,7 @@ const Index = () => {
               <Switch id={notification} defaultIsChecked={true} 
                 css={{
                   '.chakra-switch__track': {
-                    color: '#5766F1',
+                    backgroundColor: "#5766F1",
                   },
                 }}
               ></Switch>
