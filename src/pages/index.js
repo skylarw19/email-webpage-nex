@@ -30,8 +30,7 @@ const notifications = [
 const Index = () => {
 
   return(
-    <Container>
-      <Text>Hello</Text>
+    <Flex direction="column" alignItems="center" justifyContent="flex-start">
       <Box border="1px" w="75%" pt="2%" pb="5%" pl="10%" pr="10%" textAlign="center">
         <Text fontSize="lg">Edit Communication Preferences</Text>
         <Text fontSize="sm">Tell us how you would like us to engage with you.</Text>
@@ -63,7 +62,7 @@ const Index = () => {
         <br></br>
         <Button border="1px" m="1%">Cancel</Button>
       </Box>
-    </Container>
+    </Flex>
   )
 }
  
