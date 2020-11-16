@@ -36,11 +36,11 @@ const Index = () => {
 
   return(
     <Flex direction="column" alignItems="center" justifyContent="flex-start" bg="#302F35">
-      <Box border="1px" w="75%" pt="2%" pb="5%" pl="10%" pr="10%" textAlign="center" backgroundColor="rgba(216,216,216,0.1)" color="#bcbccc">
+      <Box border="1px" rounded="5px" mt="5%" mb="5%" ml="20%" mr="20%" pt="2%" pb="2%" pl="5%" pr="5%" textAlign="center" backgroundColor="rgba(216,216,216,0.1)" color="#bcbccc">
         <Text fontSize="lg" color="#ffffff">Edit Communication Preferences</Text>
-        <Text fontSize="sm"> Tell us how you would like us to engage with you.</Text>
+        <Text fontSize="75%">Tell us how you would like us to engage with you.</Text>
         <br></br>
-        <Text textAlign="left" color="#ffffff">Email Notifications:</Text>
+        <Text ml="-5%" textAlign="left" color="#ffffff">Email Notifications:</Text>
         <br></br>
         <Box border="1px">
           <Flex border="1px" p="1%" justifyContent="space-between" align="center">
@@ -61,9 +61,9 @@ const Index = () => {
         </Box>
         <br></br>
         <Link fontSize="lg" color="#ffffff"><a>Unsubscribe from all emails</a></Link>
-        <Text fontSize="sm">Please note: You will still receive email confirmation for any purchases made and from billing receipts.</Text>
+        <Text fontSize="75%">Please note: You will still receive email confirmation for any purchases made and from billing receipts.</Text>
         <br></br>
-        <Button m="1%" bg="#5766F1" color="#ffffff">Save</Button>
+        <Button m="1%" bg="#5766F1" color="#ffffff" w="84px">Save</Button>
         <br></br>
         <Button m="1%" bg="#5766F1" color="#ffffff">Cancel</Button>
       </Box>
