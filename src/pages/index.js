@@ -9,6 +9,7 @@ import {
   Select,
 } from '@chakra-ui/core'
 
+
 import { Container } from '../components/Container'
 
 // update ID for each Switch
@@ -16,6 +17,7 @@ import { Container } from '../components/Container'
 // purple nexus color not showing for Switch or Button colors? #5766F1 - need to make custom theme? 
 // transparentGray is rgba(216,216,216,0.1) = #d8d8d8
 // change fontColor to color="#ffffff"
+// Switch defaultIsChecked={true}
 
 const notifications = [
   'Content Recommendations',
@@ -28,6 +30,8 @@ const notifications = [
   'Special Offers',
   'Promotional Emails'
 ]
+
+
 
 const Index = () => {
 
@@ -52,7 +56,7 @@ const Index = () => {
           {notifications.map(notification => (
             <Flex border="1px" p="1%" justifyContent="space-between" align="center">
               <FormLabel fontSize="sm">{notification}</FormLabel>
-              <Switch id={notification} defaultIsChecked={true} bg="#5766F1"></Switch>
+              <Switch id={notification} defaultIsChecked={true} color="red"></Switch>
             </Flex>
           ))}
         </Box>
