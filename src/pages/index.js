@@ -43,8 +43,7 @@ const Index = () => {
         <Box border="1px">
           <Flex border="1px" p="1%" justifyContent="space-between" align="center">
             <FormLabel color="#FCFCFC" fontSize="sm">Frequency of Billing Summaries</FormLabel>
-            <Select size="sm" w="wrap" variant="unstyled" placeholder="bi-monthly">
-              <option value="monthly">monthly</option>
+            <Select size="sm" w="wrap" variant="unstyled" placeholder="monthly">
               <option value="quarterly">quarterly</option>
               <option value="annually">annually</option>
             </Select>
@@ -53,12 +52,18 @@ const Index = () => {
           {notifications.map(notification => (
             <Flex border="1px" p="1%" justifyContent="space-between" align="center">
               <FormLabel color="#FCFCFC" fontSize="sm">{notification}</FormLabel>
-              <Switch id={notification} defaultIsChecked={true} color="blue"></Switch>
+              <Switch id={notification} defaultIsChecked={true} 
+                css={{
+                  '.chakra-switch__track': {
+                    color: '#5766F1',
+                  },
+                }}
+              ></Switch>
             </Flex>
           ))}
         </Box>
         <br></br>
-        <Link color="#ffffff"><a>Unsubscribe from all emails</a></Link>
+        <Link color="#5766F1"><a>Unsubscribe from all emails</a></Link>
         <Text fontSize="75%">Please note: You will still receive email confirmation for any purchases made and from billing receipts.</Text>
         <br></br>
         <Button m="1%" bg="#5766F1" color="#ffffff" w="84px">Save</Button>
