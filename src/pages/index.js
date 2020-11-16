@@ -30,8 +30,6 @@ const notifications = [
   'Promotional Emails'
 ]
 
-
-
 const Index = () => {
 
   return(
@@ -44,7 +42,7 @@ const Index = () => {
         <br></br>
         <Box border="1px">
           <Flex border="1px" p="1%" justifyContent="space-between" align="center">
-            <FormLabel fontSize="sm">Frequency of Billing Summaries</FormLabel>
+            <FormLabel color="#FCFCFC" fontSize="sm">Frequency of Billing Summaries</FormLabel>
             <Select size="sm" w="wrap" variant="unstyled" placeholder="bi-monthly">
               <option value="monthly">monthly</option>
               <option value="quarterly">quarterly</option>
@@ -54,7 +52,7 @@ const Index = () => {
 
           {notifications.map(notification => (
             <Flex border="1px" p="1%" justifyContent="space-between" align="center">
-              <FormLabel fontSize="sm">{notification}</FormLabel>
+              <FormLabel color="#FCFCFC" fontSize="sm">{notification}</FormLabel>
               <Switch id={notification} defaultIsChecked={true} color="blue"></Switch>
             </Flex>
           ))}
