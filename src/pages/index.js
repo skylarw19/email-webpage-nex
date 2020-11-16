@@ -15,9 +15,8 @@ import { Container } from '../components/Container'
 // update ID for each Switch
 // change width of whole thing once on real 'MyAccount' webpage
 // purple nexus color not showing for Switch or Button colors? #5766F1 - need to make custom theme? 
-// transparentGray is rgba(216,216,216,0.1) = #d8d8d8
+// transparentGrey is rgba(216,216,216,0.1)
 // change fontColor to color="#ffffff"
-// Switch defaultIsChecked={true}
 
 const notifications = [
   'Content Recommendations',
@@ -36,12 +35,12 @@ const notifications = [
 const Index = () => {
 
   return(
-    <Flex direction="column" alignItems="center" justifyContent="flex-start" >
-      <Box border="1px" w="75%" pt="2%" pb="5%" pl="10%" pr="10%" textAlign="center" bg="#d8d8d8">
-        <Text fontSize="lg">Edit Communication Preferences</Text>
-        <Text fontSize="sm">Tell us how you would like us to engage with you.</Text>
+    <Flex direction="column" alignItems="center" justifyContent="flex-start" bg="#302F35">
+      <Box border="1px" w="75%" pt="2%" pb="5%" pl="10%" pr="10%" textAlign="center" backgroundColor="rgba(216,216,216,0.1)" color="#bcbccc">
+        <Text fontSize="lg" color="#ffffff">Edit Communication Preferences</Text>
+        <Text fontSize="sm"> Tell us how you would like us to engage with you.</Text>
         <br></br>
-        <Text textAlign="left">Email Notifications:</Text>
+        <Text textAlign="left" color="#ffffff">Email Notifications:</Text>
         <br></br>
         <Box border="1px">
           <Flex border="1px" p="1%" justifyContent="space-between" align="center">
@@ -56,18 +55,19 @@ const Index = () => {
           {notifications.map(notification => (
             <Flex border="1px" p="1%" justifyContent="space-between" align="center">
               <FormLabel fontSize="sm">{notification}</FormLabel>
-              <Switch id={notification} defaultIsChecked={true} color="red"></Switch>
+              <Switch id={notification} defaultIsChecked={true} color="blue"></Switch>
             </Flex>
           ))}
         </Box>
         <br></br>
-        <Link fontSize="lg"><a>Unsubscribe from all emails</a></Link>
+        <Link fontSize="lg" color="#ffffff"><a>Unsubscribe from all emails</a></Link>
         <Text fontSize="sm">Please note: You will still receive email confirmation for any purchases made and from billing receipts.</Text>
         <br></br>
-        <Button border="1px" m="1%" bg="#5766F1" color="#ffffff">Save</Button>
+        <Button m="1%" bg="#5766F1" color="#ffffff">Save</Button>
         <br></br>
-        <Button border="1px" m="1%" bg="#5766F1" color="#ffffff">Cancel</Button>
+        <Button m="1%" bg="#5766F1" color="#ffffff">Cancel</Button>
       </Box>
+
     </Flex>
   )
 }
