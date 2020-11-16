@@ -13,7 +13,9 @@ import { Container } from '../components/Container'
 
 // update ID for each Switch
 // change width of whole thing once on real 'MyAccount' webpage
-// purple nexus color not showing for Switch or Button colors? #5B62CC - need to make custom theme?
+// purple nexus color not showing for Switch or Button colors? #5766F1 - need to make custom theme? 
+// transparentGray is rgba(216,216,216,0.1) = #d8d8d8
+// change fontColor to color="#ffffff"
 
 const notifications = [
   'Content Recommendations',
@@ -30,8 +32,8 @@ const notifications = [
 const Index = () => {
 
   return(
-    <Flex direction="column" alignItems="center" justifyContent="flex-start">
-      <Box border="1px" w="75%" pt="2%" pb="5%" pl="10%" pr="10%" textAlign="center">
+    <Flex direction="column" alignItems="center" justifyContent="flex-start" >
+      <Box border="1px" w="75%" pt="2%" pb="5%" pl="10%" pr="10%" textAlign="center" bg="#d8d8d8">
         <Text fontSize="lg">Edit Communication Preferences</Text>
         <Text fontSize="sm">Tell us how you would like us to engage with you.</Text>
         <br></br>
@@ -50,7 +52,7 @@ const Index = () => {
           {notifications.map(notification => (
             <Flex border="1px" p="1%" justifyContent="space-between" align="center">
               <FormLabel fontSize="sm">{notification}</FormLabel>
-              <Switch id={notification} defaultIsChecked={true}></Switch>
+              <Switch id={notification} defaultIsChecked={true} bg="#5766F1"></Switch>
             </Flex>
           ))}
         </Box>
@@ -58,9 +60,9 @@ const Index = () => {
         <Link fontSize="lg"><a>Unsubscribe from all emails</a></Link>
         <Text fontSize="sm">Please note: You will still receive email confirmation for any purchases made and from billing receipts.</Text>
         <br></br>
-        <Button border="1px" m="1%">Save</Button>
+        <Button border="1px" m="1%" bg="#5766F1" color="#ffffff">Save</Button>
         <br></br>
-        <Button border="1px" m="1%">Cancel</Button>
+        <Button border="1px" m="1%" bg="#5766F1" color="#ffffff">Cancel</Button>
       </Box>
     </Flex>
   )
