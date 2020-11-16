@@ -37,7 +37,7 @@ const Index = () => {
   return(
     <Flex direction="column" alignItems="center" justifyContent="flex-start" bg="#302F35">
       <Box border="1px" rounded="5px" mt="5%" mb="5%" ml="20%" mr="20%" pt="2%" pb="2%" pl="5%" pr="5%" textAlign="center" backgroundColor="rgba(216,216,216,0.1)" color="#bcbccc">
-        <Text fontSize="lg" color="#ffffff">Edit Communication Preferences</Text>
+        <Text fontSize="lg" color="#ffffff" fontSize="150%">Edit Communication Preferences</Text>
         <Text fontSize="75%">Tell us how you would like us to engage with you.</Text>
         <br></br>
         <Text ml="-5%" textAlign="left" color="#ffffff">Email Notifications:</Text>
@@ -60,7 +60,7 @@ const Index = () => {
           ))}
         </Box>
         <br></br>
-        <Link fontSize="lg" color="#ffffff"><a>Unsubscribe from all emails</a></Link>
+        <Link color="#ffffff"><a>Unsubscribe from all emails</a></Link>
         <Text fontSize="75%">Please note: You will still receive email confirmation for any purchases made and from billing receipts.</Text>
         <br></br>
         <Button m="1%" bg="#5766F1" color="#ffffff" w="84px">Save</Button>
