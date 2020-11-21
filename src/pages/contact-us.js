@@ -25,6 +25,11 @@ const ContactUs = () => {
                     <Input border="1px" rounded="5px" backgroundColor="rgba(216,216,216,0.1)" color="#bcbccc"></Input>
                 </FormControl>
                 
+                <FormControl id="phone-number" my="3%">
+                    <FormLabel color="#FFFFFF">Phone Number</FormLabel>
+                    <Input border="1px" rounded="5px" backgroundColor="rgba(216,216,216,0.1)" color="#bcbccc"></Input>
+                </FormControl>
+                
                 <FormControl id="message" isRequired>
                     <FormLabel color="#FFFFFF">Message</FormLabel>
                     <Textarea border="1px" rounded="5px" backgroundColor="rgba(216,216,216,0.1)" color="#bcbccc"></Textarea>

@@ -10,7 +10,6 @@ import {
   Checkbox,
 } from '@chakra-ui/core'
 
-import { ToggleSwitch } from '../components/ToggleSwitch'
 import { Container } from '../components/Container'
 
 // update ID for each Switch
