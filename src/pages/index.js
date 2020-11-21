@@ -34,8 +34,8 @@ const notifications = [
 const Index = () => {
 
   return(
-    <Flex direction="column" alignItems="center" justifyContent="flex-start" bg="#302F35" h="100vh">
-      <Box border="1px" rounded="5px" mt="5%" mb="5%" ml="20%" mr="20%" pt="2%" pb="2%" pl="5%" pr="5%" textAlign="center" backgroundColor="rgba(216,216,216,0.1)" color="#bcbccc">
+    <Flex direction="column" alignItems="center" justifyContent="flex-start"  bg="#302F35">
+      <Box border="1px" rounded="5px" my="5%" mx="20%" py="2%" px="5%" textAlign="center" backgroundColor="rgba(216,216,216,0.1)" color="#bcbccc">
         <Text fontSize="lg" color="#ffffff" fontSize="150%">Edit Communication Preferences</Text>
         <Text fontSize="75%" >Tell us how you would like us to engage with you.</Text>
         <br></br>
