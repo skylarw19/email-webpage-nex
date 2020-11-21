@@ -19,14 +19,12 @@ const ContactUs = () => {
                     <FormLabel color="#FFFFFF">Name</FormLabel>
                     <Input border="1px" rounded="5px" backgroundColor="rgba(216,216,216,0.1)" color="#bcbccc"></Input>
                 </FormControl>
-               
 
                 <FormControl id="email" isRequired my="3%">
                     <FormLabel color="#FFFFFF">Email Address</FormLabel>
                     <Input border="1px" rounded="5px" backgroundColor="rgba(216,216,216,0.1)" color="#bcbccc"></Input>
                 </FormControl>
                 
-
                 <FormControl id="message" isRequired>
                     <FormLabel color="#FFFFFF">Message</FormLabel>
                     <Textarea border="1px" rounded="5px" backgroundColor="rgba(216,216,216,0.1)" color="#bcbccc"></Textarea>
@@ -34,7 +32,7 @@ const ContactUs = () => {
                 
                 <br></br>
                 <Box textAlign="center">
-                    <Button  bg="#5766F1" color="#ffffff" w="84px" type="submit">Submit</Button>
+                    <Button bg="#5766F1" color="#ffffff" w="84px" type="submit">Submit</Button>
                 </Box>
             </form>
         </Box>

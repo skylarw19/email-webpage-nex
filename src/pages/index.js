@@ -7,6 +7,7 @@ import {
   Link,
   Button,
   Select,
+  Checkbox,
 } from '@chakra-ui/core'
 
 import { ToggleSwitch } from '../components/ToggleSwitch'
@@ -34,7 +35,7 @@ const notifications = [
 const Index = () => {
 
   return(
-    <Flex direction="column" alignItems="center" justifyContent="flex-start"  bg="#302F35">
+    <Flex direction="column" alignItems="center" justifyContent="flex-start" bg="#302F35">
       <Box border="1px" rounded="5px" my="5%" mx="20%" py="2%" px="5%" textAlign="center" backgroundColor="rgba(216,216,216,0.1)" color="#bcbccc">
         <Text fontSize="lg" color="#ffffff" fontSize="150%">Edit Communication Preferences</Text>
         <Text fontSize="75%" >Tell us how you would like us to engage with you.</Text>
@@ -49,6 +50,7 @@ const Index = () => {
               <option value="annually">annually</option>
             </Select>
           </Flex>
+          
           {notifications.map(notification => (
             <Flex border="1px" p="1%" justifyContent="space-between" align="center">
               <FormLabel color="#FCFCFC" fontSize="sm">{notification}</FormLabel>
@@ -60,7 +62,6 @@ const Index = () => {
                 }}
                 //tried color, colorScheme, backgroundColor, background
               ></Switch>
-              
             </Flex>
           ))}
         </Box>
