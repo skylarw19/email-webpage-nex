@@ -9,12 +9,13 @@ import {
   Select,
 } from '@chakra-ui/core'
 
-
+import { ToggleSwitch } from '../components/ToggleSwitch'
 import { Container } from '../components/Container'
 
 // update ID for each Switch
 // change width of whole thing once on real 'MyAccount' webpage
-// purple nexus color not showing for Switch or Button colors? #5766F1 - need to make custom theme? 
+// purple nexus color not showing for Switch or Button colors? #5766F1 - need to make custom theme? but red.500 doesn't work so custom theme unlikely to work
+// tried changing switch colors with prop color, colorScheme, backgroundColor, background
 // transparentGrey is rgba(216,216,216,0.1)
 // change fontColor to color="#ffffff"
 
@@ -33,10 +34,10 @@ const notifications = [
 const Index = () => {
 
   return(
-    <Flex direction="column" alignItems="center" justifyContent="flex-start" bg="#302F35">
+    <Flex direction="column" alignItems="center" justifyContent="flex-start" bg="#302F35" h="100vh">
       <Box border="1px" rounded="5px" mt="5%" mb="5%" ml="20%" mr="20%" pt="2%" pb="2%" pl="5%" pr="5%" textAlign="center" backgroundColor="rgba(216,216,216,0.1)" color="#bcbccc">
         <Text fontSize="lg" color="#ffffff" fontSize="150%">Edit Communication Preferences</Text>
-        <Text fontSize="75%">Tell us how you would like us to engage with you.</Text>
+        <Text fontSize="75%" >Tell us how you would like us to engage with you.</Text>
         <br></br>
         <Text ml="-5%" textAlign="left" color="#ffffff">Email Notifications:</Text>
         <br></br>
@@ -48,7 +49,6 @@ const Index = () => {
               <option value="annually">annually</option>
             </Select>
           </Flex>
-
           {notifications.map(notification => (
             <Flex border="1px" p="1%" justifyContent="space-between" align="center">
               <FormLabel color="#FCFCFC" fontSize="sm">{notification}</FormLabel>
@@ -58,7 +58,9 @@ const Index = () => {
                     backgroundColor: "#5766F1",
                   },
                 }}
+                //tried color, colorScheme, backgroundColor, background
               ></Switch>
+              
             </Flex>
           ))}
         </Box>
