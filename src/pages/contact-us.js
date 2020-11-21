@@ -9,6 +9,7 @@ import {
     Select,
     Input,
     FormControl,
+    Textarea
   } from '@chakra-ui/core'
 
 const ContactUs = () => {
@@ -53,12 +54,12 @@ const ContactUs = () => {
 
                 <FormControl id="message" isRequired>
                     <FormLabel color="#FFFFFF">Message</FormLabel>
-                    <Input border="1px" rounded="5px" 
+                    <Textarea border="1px" rounded="5px" 
                         // mt="5%" mb="5%"  
                         // margin="auto"
                         // pt="2%" pb="2%" pl="5%" pr="5%" 
                         backgroundColor="rgba(216,216,216,0.1)" color="#bcbccc">
-                    </Input>
+                    </Textarea>
                 </FormControl>
                 <br></br>
                 <Box textAlign="center">
