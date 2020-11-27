@@ -84,26 +84,17 @@ const Index = () => {
 
 
       <Button onClick={onOpen} >Report a Problem</Button>
-      
-      <Modal isOpen={isOpen} onClose={onClose}>
+      <Modal isOpen={isOpen} onClose={onClose} blockScrollOnMount={false} size="xl">
         <ModalOverlay />
-        <ModalContent bg="#302F35" border="1px" rounded="5px" mx="20%" py="2%" px="3%" color="#bcbccc">
-          <ModalHeader pt="10vh" textAlign="center" fontSize="lg" color="#ffffff" fontSize="150%" >Report a Problem</ModalHeader>
+        <ModalContent bg="#302F35" border="1px" rounded="5px" color="#bcbccc" py="2%" px="3%" >
+          <ModalHeader  textAlign="center" color="#ffffff" fontSize="150%" >Report a Problem</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-
             <ReportAProblem></ReportAProblem>
-
           </ModalBody>
-          <ModalFooter>
-            <Button colorScheme="blue" mr={3} onClick={onClose}>
-              Close
-            </Button>
-          </ModalFooter>
         </ModalContent>
       </Modal>
 
-          
     </Flex>
   )
 }
