@@ -7,10 +7,18 @@ import {
   Link,
   Button,
   Select,
-  Checkbox,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
+  useDisclosure
 } from '@chakra-ui/core'
 
 import { Container } from '../components/Container'
+import { ReportAProblem } from '../components/ReportAProblem'
 
 // update ID for each Switch
 // change width of whole thing once on real 'MyAccount' webpage
@@ -31,7 +39,9 @@ const notifications = [
   'Promotional Emails'
 ]
 
+
 const Index = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure()
 
   return(
     <Flex direction="column" alignItems="center" justifyContent="flex-start" bg="#302F35">
@@ -60,7 +70,7 @@ const Index = () => {
                   },
                 }}
                 //tried color, colorScheme, backgroundColor, background
-              ></Switch>
+                ></Switch>
             </Flex>
           ))}
         </Box>
@@ -73,6 +83,27 @@ const Index = () => {
         <Button m="1%" bg="#5766F1" color="#ffffff">Cancel</Button>
       </Box>
 
+
+      <Button onClick={onOpen} >Report a Problem</Button>
+      <Modal isOpen={isOpen} onClose={onClose}>
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader>Modal Title</ModalHeader>
+          <ModalCloseButton />
+          <ModalBody>
+            <ReportAProblem></ReportAProblem>
+          </ModalBody>
+
+          <ModalFooter>
+            <Button colorScheme="blue" mr={3} onClick={onClose}>
+              Close
+            </Button>
+            <Button variant="ghost">Secondary Action</Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
+
+          
     </Flex>
   )
 }
