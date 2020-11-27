@@ -83,10 +83,10 @@ const Index = () => {
       </Box>
 
 
-      <Button onClick={onOpen} >Report a Problem</Button>
+      <Button onClick={onOpen} variant="link" color="#5766F1" mb="2%">Report a Problem</Button>
       <Modal isOpen={isOpen} onClose={onClose} blockScrollOnMount={false} size="xl">
         <ModalOverlay />
-        <ModalContent bg="#302F35" border="1px" rounded="5px" color="#bcbccc" py="2%" px="3%" >
+        <ModalContent bg="#302F35" border="1px" rounded="5px" color="#bcbccc" py="2%" px="2%" >
           <ModalHeader  textAlign="center" color="#ffffff" fontSize="150%" >Report a Problem</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
