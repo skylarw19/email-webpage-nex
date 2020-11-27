@@ -54,6 +54,7 @@ const Index = () => {
           <Flex border="1px" p="1%" justifyContent="space-between" align="center">
             <FormLabel color="#FCFCFC" fontSize="sm">Frequency of Billing Summaries</FormLabel>
             <Select size="sm" w="wrap" variant="unstyled" placeholder="monthly">
+              <option value="quarterly">bi-monthly</option>
               <option value="quarterly">quarterly</option>
               <option value="annually">annually</option>
             </Select>
@@ -86,9 +87,9 @@ const Index = () => {
       <Button onClick={onOpen} variant="link" color="#5766F1" mb="2%">Report a Problem</Button>
       <Modal isOpen={isOpen} onClose={onClose} blockScrollOnMount={false} size="xl">
         <ModalOverlay />
-        <ModalContent bg="#302F35" border="1px" rounded="5px" color="#bcbccc" py="2%" px="2%" >
+        <ModalContent bg="#302F35" border="1px" rounded="5px" color="#bcbccc" py="1%" px="1%" >
           <ModalHeader  textAlign="center" color="#ffffff" fontSize="150%" >Report a Problem</ModalHeader>
-          <ModalCloseButton />
+          <ModalCloseButton color="#5766F1" />
           <ModalBody>
             <ReportAProblem></ReportAProblem>
           </ModalBody>

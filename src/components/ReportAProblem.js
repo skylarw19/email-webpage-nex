@@ -7,14 +7,6 @@ import {
     FormControl,
     Textarea,
     Flex,
-    Modal,
-    ModalOverlay,
-    ModalContent,
-    ModalHeader,
-    ModalFooter,
-    ModalBody,
-    ModalCloseButton,
-    
   } from '@chakra-ui/core'
 
 export const ReportAProblem = (props) => {
@@ -44,7 +36,7 @@ export const ReportAProblem = (props) => {
                 <FormLabel color="#FFFFFF">Message</FormLabel>
                 <Text  fontSize="75%">(Description of Problem)</Text>
             </Flex>
-            <Textarea border="1px" rounded="5px" backgroundColor="rgba(216,216,216,0.1)" color="#bcbccc" placeholder="Description of Problem"></Textarea>
+            <Textarea height="30vh" resize="vertical" border="1px" rounded="5px" backgroundColor="rgba(216,216,216,0.1)" color="#bcbccc" placeholder="Description of Problem"></Textarea>
         </FormControl>
         
         <br></br>
