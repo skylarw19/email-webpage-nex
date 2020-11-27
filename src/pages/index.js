@@ -14,7 +14,8 @@ import {
   ModalFooter,
   ModalBody,
   ModalCloseButton,
-  useDisclosure
+  useDisclosure,
+  Image
 } from '@chakra-ui/core'
 
 import { ReportAProblem } from '../components/ReportAProblem'
@@ -88,9 +89,14 @@ const Index = () => {
       <Modal isOpen={isOpen} onClose={onClose} blockScrollOnMount={false} size="xl">
         <ModalOverlay />
         <ModalContent bg="#302F35" border="1px" rounded="5px" color="#bcbccc" py="1%" px="1%" >
-          <ModalHeader  textAlign="center" color="#ffffff" fontSize="150%" >Report a Problem</ModalHeader>
+          <Box boxSize="sm">
+            <Image src="" alt="Nexus Logo" />
+          </Box>
+          <ModalHeader  textAlign="center" color="#ffffff" fontSize="150%" >
+            Report a Problem</ModalHeader>
           <ModalCloseButton color="#5766F1" />
           <ModalBody>
+            <Image src="src/logo/nexus-logo_resize1.png" ></Image>
             <ReportAProblem></ReportAProblem>
           </ModalBody>
         </ModalContent>
