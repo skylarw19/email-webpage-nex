@@ -90,13 +90,12 @@ const Index = () => {
         <ModalOverlay />
         <ModalContent bg="#302F35" border="1px" rounded="5px" color="#bcbccc" py="1%" px="1%" >
           <Box boxSize="sm">
-            <Image src="" alt="Nexus Logo" />
+            <Image src="https://i.imgur.com/Un5VNLk.png" alt="Nexus Logo" h="4.5vh"/>
           </Box>
           <ModalHeader  textAlign="center" color="#ffffff" fontSize="150%" >
             Report a Problem</ModalHeader>
           <ModalCloseButton color="#5766F1" />
           <ModalBody>
-            <Image src="src/logo/nexus-logo_resize1.png" ></Image>
             <ReportAProblem></ReportAProblem>
           </ModalBody>
         </ModalContent>
