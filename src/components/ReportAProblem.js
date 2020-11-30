@@ -32,10 +32,7 @@ export const ReportAProblem = (props) => {
         </FormControl>
         
         <FormControl id="message" isRequired>
-            <Flex alignItems="center">
-                <FormLabel color="#FFFFFF">Message</FormLabel>
-                <Text  fontSize="75%">(Description of Problem)</Text>
-            </Flex>
+            <FormLabel color="#FFFFFF">Message</FormLabel>
             <Textarea height="30vh" resize="vertical" border="1px" rounded="5px" backgroundColor="rgba(216,216,216,0.1)" color="#bcbccc" placeholder="Description of Problem"></Textarea>
         </FormControl>
         
