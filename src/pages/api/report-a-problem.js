@@ -38,7 +38,7 @@ export default async(req,res) =>{
             Name: 'skylar.wong',
             },
         ],
-        Subject: 'My first Mailjet Email!',
+        Subject: 'My 2nd Mailjet Email!',
         TextPart: 'Greetings from Mailjet!',
         HTMLPart:
             '<h3>Dear passenger 1, welcome to <a href="https://www.mailjet.com/">Mailjet</a>!</h3><br />May the delivery force be with you!',
