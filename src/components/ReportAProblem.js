@@ -82,7 +82,7 @@ export const ReportAProblem = (props) => {
         </Box>
     </form>
 
-        <AlertDialog
+        {/* <AlertDialog
             isOpen={alertIsOpen}
             onClose={closeAlert}
         >
@@ -107,7 +107,7 @@ export const ReportAProblem = (props) => {
               </AlertDialogContent>
             </AlertDialogOverlay>
     
-        </AlertDialog>
+        </AlertDialog> */}
     
     </>   
   )
