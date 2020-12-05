@@ -12,21 +12,13 @@ import {
 
 import {useState} from 'react'
 
-// import '../../config/mailjet
-// const mailjet = require('node-mailjet').connect(
-//     process.env.MJ_APIKEY_PUBLIC,
-//     process.env.MJ_APIKEY_PRIVATE
-// )
 export const ReportAProblem = (props) => {
     
-
     const [formData, setFormData] = useState({
         name: "",
         email: "",
         phoneNumber: "",
         message: "",
-        date: "",
-        time: ""
     })
 
     const updateField = async (e) => {
@@ -35,21 +27,6 @@ export const ReportAProblem = (props) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        // setFormData({...formData, date: "HIII"})
-        let today = new Date();
-        console.log(today)
-        console.log(formData.name)
-        // console.log(formData.date)
-        console.log(formData.email)
-
-
-        // const apiResult = await fetch(`/api/report-a-problem`, {body: JSON.stringify(formData)})
-
-        // const apiResult = await fetch(`/api/report-a-problem?name=${formData.name}`)
-        // // const apiResult = await fetch(`/api/report-a-problem`)
-        // const data = await apiResult.json();
-        // console.log(data)
-
         const apiResult = await fetch(`/api/report-a-problem`, {
             method: 'POST',
             body: JSON.stringify(formData),
@@ -57,7 +34,6 @@ export const ReportAProblem = (props) => {
                 'Content-type': 'application/json'
             }
         })
-
     }
     
     return (
@@ -91,7 +67,6 @@ export const ReportAProblem = (props) => {
             <Button type="submit" bg="#5766F1" color="#ffffff" w="84px" type="submit">Submit</Button>
         </Box>
     </form>
-        
-    
+         
   )
 }
