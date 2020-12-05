@@ -5,49 +5,21 @@ const mailjet = require('node-mailjet').connect(
 
 export default async(req,res) =>{
 
-    // const request = mailjet.post('send', { version: 'v3.1' }).request({
-    // Messages: [
-    //     {
-    //         From: {
-    //             Email: 'li.q.wong@gmail.com',//'$SENDER_EMAIL',
-    //             Name: 'li.q.wong',
-    //         },
-    //         To: [
-    //             {
-    //             Email: 'skylar.wong19@gmail.com', // info@getnexus.us '$RECIPIENT_EMAIL',
-    //             Name: 'skylar.wong', //info@getnexus.us
-    //             },
-    //         ],
-    //         Subject: 'Report a Problem to Nexus',
-    //         TextPart: '',  //when HTMLPart is used, TextPart is not needed
-    //         HTMLPart:
-    //             '<h3>Dear passenger 1, welcome to <a href="https://www.mailjet.com/">Mailjet</a>!</h3><br />May the delivery force be with you!',
-    //     },
-    // ],
-    // })
-    // request
-    // .then(result => {
-    //     console.log(result.body)
-    // })
-    // .catch(err => {
-    //     console.log(err.statusCode)
-    // })
-
     const request = mailjet.post('send', { version: 'v3.1' }).request({
         Messages: [
           {
             From: {
-              Email: 'li.q.wong@gmail.com',
-              Name: 'li.q.wong',
+              Email: 'li.q.wong@gmail.com',  // sender email needs to be validated Mailjet email account (not )
+              Name: req.body.name,  // req.body.name is the sender name
             },
             To: [
               {
-                Email: 'skylar.wong19@gmail.com',
-                Name: 'skylar.wong',
+                Email: 'skylar.wong19@gmail.com',  //change to info@getnexus.us
+                Name: 'skylar.wong', //change to info@getnexus.us
               },
             ],
-            Subject: 'with POST and headers all fields filled',
-            TextPart: `Name: ${req.body.name}, Email: ${req.body.email}, Num: ${req.body.phoneNumber}, Message: ${req.body.message}`,
+            Subject: 'with From name as req.body.name',
+            TextPart: `Sender Name: ${req.body.name}, Sender Email: ${req.body.email}, Sender Num: ${req.body.phoneNumber}, Message: ${req.body.message}`,
             // HTMLPart:
             // '<h3>Dear passenger 1, welcome to <a href="https://www.mailjet.com/">Mailjet</a>!</h3><br />May the delivery force be with you!',
             // TextPart: `Hello ${req.query.name} - should have showed name`,
