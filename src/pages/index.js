@@ -15,7 +15,13 @@ import {
   ModalBody,
   ModalCloseButton,
   useDisclosure,
-  Image
+  Image,
+  AlertDialog,
+  AlertDialogBody,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogContent,
+  AlertDialogOverlay,
 } from '@chakra-ui/core'
 
 import { ReportAProblem } from '../components/ReportAProblem'
