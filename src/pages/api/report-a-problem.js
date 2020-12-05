@@ -20,21 +20,10 @@ export default async(req,res) =>{
               },
             ],
             Subject: `Nexus Report a Problem ${today}`,
-            TextPart: 
-            `
-            Customer Name: ${req.body.name}
-            Customer Email: ${req.body.email}
-            Customer Phone Number: ${req.body.phoneNumber}
-            Message: ${req.body.message}
-            
-            ${today}`,
-
-            // HTMLPart:
-            // '<h3>Dear passenger 1, welcome to <a href="https://www.mailjet.com/">Mailjet</a>!</h3><br />May the delivery force be with you!',
-            // TextPart: `Hello ${req.query.name} - should have showed name`,
+            TextPart: `Customer Name: ${req.body.name} \nCustomer Email: ${req.body.email} \nCustomer Phone Number: ${req.body.phoneNumber} \n\nMessage: ${req.body.message} \n\n${today}`,
+        
             // HTMLPart:
             //   `<h3>Dear ${req.body.name}, welcome to <a href="https://www.mailjet.com/">Mailjet</a>!</h3><br />May the delivery force be with you!`,
-            //   '<h3>Dear passenger 1, welcome to <a href="https://www.mailjet.com/">Mailjet</a>!</h3><br />May the delivery force be with you!',
           },
         ],
       })
