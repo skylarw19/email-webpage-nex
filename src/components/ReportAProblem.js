@@ -8,6 +8,12 @@ import {
     FormControl,
     Textarea,
     Flex,
+    AlertDialog,
+    AlertDialogBody,
+    AlertDialogFooter,
+    AlertDialogHeader,
+    AlertDialogContent,
+    AlertDialogOverlay,
   } from '@chakra-ui/core'
 
 import {useState} from 'react'
@@ -20,6 +26,15 @@ export const ReportAProblem = (props) => {
         phoneNumber: "",
         message: "",
     })
+    
+    const [alertIsOpen, setAlertIsOpen] = useState(false)
+    // const openAlert = () => setAlertIsOpen(true)
+    const closeAlert = () => setAlertIsOpen(false)
+    // const alertOnClose = () => setIsSubmitted(false);
+
+    // const handleAlertClose = () => {
+    //     setIsSubmitted(false)
+    // }
 
     const updateField = async (e) => {
         setFormData({...formData, [e.target.name]: e.target.value})
@@ -27,6 +42,8 @@ export const ReportAProblem = (props) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        props.closeForm();
+        setAlertIsOpen(true)
         const apiResult = await fetch(`/api/report-a-problem`, {
             method: 'POST',
             body: JSON.stringify(formData),
@@ -37,7 +54,34 @@ export const ReportAProblem = (props) => {
     }
     
     return (
+        <>
+        <AlertDialog
+            isOpen={alertIsOpen}
+            onClose={closeAlert}
+        >
+            <AlertDialogOverlay>
+              <AlertDialogContent>
+                <AlertDialogHeader fontSize="lg" fontWeight="bold">
+                  Delete Customer
+                </AlertDialogHeader>
     
+                <AlertDialogBody>
+                  Are you sure? You can't undo this action afterwards.
+                </AlertDialogBody>
+    
+                <AlertDialogFooter>
+                  <Button onClick={closeAlert}>
+                    Cancel
+                  </Button>
+                  <Button colorScheme="red" onClick={closeAlert} ml={3}>
+                    Delete
+                  </Button>
+                </AlertDialogFooter>
+              </AlertDialogContent>
+            </AlertDialogOverlay>
+    
+        </AlertDialog>
+
     <form onSubmit={handleSubmit} >
         <FormControl id="name" isRequired mb="3%">
             <FormLabel color="#FFFFFF">Name</FormLabel>
@@ -67,6 +111,8 @@ export const ReportAProblem = (props) => {
             <Button type="submit" bg="#5766F1" color="#ffffff" w="84px" type="submit">Submit</Button>
         </Box>
     </form>
-         
+
+    
+    </>   
   )
 }

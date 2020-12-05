@@ -19,6 +19,7 @@ import {
 } from '@chakra-ui/core'
 
 import { ReportAProblem } from '../components/ReportAProblem'
+import {useState} from 'react'
 
 // update ID for each Switch
 // change width of whole thing once on real 'MyAccount' webpage
@@ -41,7 +42,11 @@ const notifications = [
 
 
 const Index = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure()
+  // const { isOpen, onOpen, onClose } = useDisclosure()
+
+  const [formIsOpen, setFormIsOpen] = useState(false)
+  const openForm = () => setFormIsOpen(true)
+  const closeForm = () => setFormIsOpen(false)
 
   return(
     <Flex direction="column" alignItems="center" justifyContent="flex-start" bg="#302F35">
@@ -84,7 +89,7 @@ const Index = () => {
         <Button m="1%" bg="#5766F1" color="#ffffff">Cancel</Button>
       </Box>
 
-
+{/* 
       <Button onClick={onOpen} variant="link" color="#5766F1" mb="2%">Report a Problem</Button>
       <Modal isOpen={isOpen} onClose={onClose} blockScrollOnMount={false} size="xl">
         <ModalOverlay />
@@ -96,6 +101,21 @@ const Index = () => {
           <ModalCloseButton color="#5766F1" />
           <ModalBody>
             <ReportAProblem></ReportAProblem>
+          </ModalBody>
+        </ModalContent>
+      </Modal> */}
+      
+      <Button onClick={openForm} variant="link" color="#5766F1" mb="2%">Report a Problem</Button>
+      <Modal isOpen={formIsOpen} onClose={closeForm} blockScrollOnMount={false} size="xl">
+        <ModalOverlay />
+        <ModalContent bg="#302F35" border="1px" rounded="5px" color="#bcbccc" py="1%" px="1%" >
+          <Box boxSize="sm">
+            <Image src="https://i.imgur.com/Un5VNLk.png" alt="Nexus Logo" h="4.5vh"/>
+          </Box>
+          <ModalHeader  textAlign="center" color="#ffffff" fontSize="150%" >Report a Problem</ModalHeader>
+          <ModalCloseButton color="#5766F1" />
+          <ModalBody>
+            <ReportAProblem closeForm={closeForm}></ReportAProblem>
           </ModalBody>
         </ModalContent>
       </Modal>
