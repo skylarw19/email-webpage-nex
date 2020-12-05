@@ -18,8 +18,11 @@ export default async(req,res) =>{
                 Name: 'skylar.wong', //change to info@getnexus.us
               },
             ],
-            Subject: 'with From name as req.body.name',
-            TextPart: `Sender Name: ${req.body.name}, Sender Email: ${req.body.email}, Sender Num: ${req.body.phoneNumber}, Message: ${req.body.message}`,
+            Subject: 'Nexus Report a Problem ',
+            TextPart: `Customer Name: ${req.body.name} 
+            Customer Email: ${req.body.email}
+            Customer Phone Number: ${req.body.phoneNumber}
+            Message: ${req.body.message}`,
             // HTMLPart:
             // '<h3>Dear passenger 1, welcome to <a href="https://www.mailjet.com/">Mailjet</a>!</h3><br />May the delivery force be with you!',
             // TextPart: `Hello ${req.query.name} - should have showed name`,
