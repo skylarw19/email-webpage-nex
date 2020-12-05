@@ -4,6 +4,7 @@ const mailjet = require('node-mailjet').connect(
 )
 
 export default async(req,res) =>{
+    const today = new Date();
 
     const request = mailjet.post('send', { version: 'v3.1' }).request({
         Messages: [
@@ -15,14 +16,19 @@ export default async(req,res) =>{
             To: [
               {
                 Email: 'skylar.wong19@gmail.com',  //change to info@getnexus.us
-                Name: 'skylar.wong', //change to info@getnexus.us
+                Name: 'info@getnexus.us', //change to info@getnexus.us
               },
             ],
-            Subject: 'Nexus Report a Problem ',
-            TextPart: `Customer Name: ${req.body.name} 
+            Subject: `Nexus Report a Problem ${today}`,
+            TextPart: 
+            `
+            Customer Name: ${req.body.name}
             Customer Email: ${req.body.email}
             Customer Phone Number: ${req.body.phoneNumber}
-            Message: ${req.body.message}`,
+            Message: ${req.body.message}
+            
+            ${today}`,
+
             // HTMLPart:
             // '<h3>Dear passenger 1, welcome to <a href="https://www.mailjet.com/">Mailjet</a>!</h3><br />May the delivery force be with you!',
             // TextPart: `Hello ${req.query.name} - should have showed name`,

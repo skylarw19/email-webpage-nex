@@ -21,11 +21,12 @@ export const ReportAProblem = (props) => {
     
 
     const [formData, setFormData] = useState({
-        test: "blue",
         name: "",
         email: "",
         phoneNumber: "",
-        message: ""
+        message: "",
+        date: "",
+        time: ""
     })
 
     const updateField = async (e) => {
@@ -34,10 +35,13 @@ export const ReportAProblem = (props) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        // setFormData({...formData, date: "HIII"})
+        let today = new Date();
+        console.log(today)
         console.log(formData.name)
+        // console.log(formData.date)
         console.log(formData.email)
-        console.log(formData.phoneNumber)
-        console.log(formData.message)
+
 
         // const apiResult = await fetch(`/api/report-a-problem`, {body: JSON.stringify(formData)})
 
