@@ -12,7 +12,13 @@ import {
 
 import {useState} from 'react'
 
+// import '../../config/mailjet
+// const mailjet = require('node-mailjet').connect(
+//     process.env.MJ_APIKEY_PUBLIC,
+//     process.env.MJ_APIKEY_PRIVATE
+// )
 export const ReportAProblem = (props) => {
+    
 
     const [formData, setFormData] = useState({
         test: "blue",
@@ -33,9 +39,21 @@ export const ReportAProblem = (props) => {
         console.log(formData.phoneNumber)
         console.log(formData.message)
 
-        const apiResult = await fetch(`/api/report-a-problem`)
-        const data = await apiResult.json();
-        console.log(data)
+        // const apiResult = await fetch(`/api/report-a-problem`, {body: JSON.stringify(formData)})
+
+        // const apiResult = await fetch(`/api/report-a-problem?name=${formData.name}`)
+        // // const apiResult = await fetch(`/api/report-a-problem`)
+        // const data = await apiResult.json();
+        // console.log(data)
+
+        const apiResult = await fetch(`/api/report-a-problem`, {
+            method: 'POST',
+            body: JSON.stringify(formData),
+            headers: {
+                'Content-type': 'application/json'
+            }
+        })
+
     }
     
     return (
