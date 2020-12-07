@@ -10,7 +10,7 @@ export default async(req,res) =>{
         Messages: [
           {
             From: {
-              Email: 'li.q.wong@gmail.com',  // sender email needs to be validated Mailjet email account (not )
+              Email: 'li.q.wong@gmail.com',  // sender email needs to be the validated Mailjet email account, therefore this should be info@getnexus.us (info@getnexus.us will send to info@getnexus.us, wiht customer email in the body)
               Name: req.body.name,  // req.body.name is the sender name
             },
             To: [
@@ -19,7 +19,7 @@ export default async(req,res) =>{
                 Name: 'info@getnexus.us', //change to info@getnexus.us
               },
             ],
-            Subject: `Nexus Report a Problem ${today}`,
+            Subject: `[Nexus] Report a Problem ${today}`,
             TextPart: `Customer Name: ${req.body.name} \nCustomer Email: ${req.body.email} \nCustomer Phone Number: ${req.body.phoneNumber} \n\nMessage: ${req.body.message} \n\n${today}`,
         
             // HTMLPart:
